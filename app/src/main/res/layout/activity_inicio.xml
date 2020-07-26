@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InicioActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewTituloInicioSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Inicio Sesión"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonInicioUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            android:text="Ingresar"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textViewOlvidarContraseña"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:onClick="RecuperarContrasenha"
+            android:text="¿Has olvidado tu contraseña?"
+            android:textAlignment="center"
+            android:textColor="#2196F3" />
+
+        <TextView
+            android:id="@+id/textViewOlvidarContraseña2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="24dp"
+            android:onClick="mostrarDialogoPersonalisado"
+            android:text="Recuperar Contraseña-Metodo2"
+            android:textAlignment="center"
+            android:textColor="#2196F3" />
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
