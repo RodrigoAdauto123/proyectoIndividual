@@ -12,7 +12,7 @@
         android:layout_width="188dp"
         android:layout_height="45dp"
         android:background="#8C009688"
-        android:onClick="firebase"
+        android:onClick="iniciarSesion"
         android:text="Iniciar Sesión"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
