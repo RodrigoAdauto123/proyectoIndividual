@@ -65,11 +65,15 @@ public class ListaCursoAdapter extends RecyclerView.Adapter<ListaCursoAdapter.Cu
             @Override
             public void onClick(View v) {
 
-                Intent intent =new Intent(v.getContext(), CursosActivity.class);
+                ListaCursosActivity listaCursosActivity = new ListaCursosActivity();
+                Intent intent = new Intent(v.getContext(), CursosActivity.class);
                 intent.putExtra("position", position);
                 intent.putExtra("cat",categoria);
+                listaCursosActivity.finish();
                 contexto.startActivity(intent);
+
             }
+
         });
 
     }

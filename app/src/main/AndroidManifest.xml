@@ -28,7 +28,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ListaCursosActivity">
+        <activity android:name=".ListaCursosActivity"
+            android:parentActivityName=".PaginaPrincipalActivity">
 
 
         </activity>
@@ -36,7 +37,8 @@
 
 
         </activity>
-        <activity android:name=".CursosActivity">
+        <activity android:name=".CursosActivity"
+            android:parentActivityName=".ListaCursosActivity">
 
 
         </activity>

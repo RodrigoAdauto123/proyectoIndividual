@@ -3,5 +3,7 @@
     <string name="facebook_app_id">426587141633184</string>
     <string name="facebook_application_id">426587141633184</string>
     <string name="fb_login_protocol_scheme">fb426587141633184</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 
 </resources>

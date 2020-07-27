@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:background="@drawable/fondomenu">
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/usuariomasculino">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pepe Juan"
+        android:textColor="@color/darkgray"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/correoElectronico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="juan@pucp.pe"
+        android:textColor="@color/darkgray"
+        android:textStyle="bold" />
+
+
+
+</LinearLayout>
