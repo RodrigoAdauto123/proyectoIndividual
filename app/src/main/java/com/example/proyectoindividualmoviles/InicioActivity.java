@@ -1,6 +1,7 @@
 package com.example.proyectoindividualmoviles;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,8 +27,11 @@ public class InicioActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.action_bar_layout);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
+
 
         callbackManager = CallbackManager.Factory.create();
         loginButton= findViewById(R.id.login_button);

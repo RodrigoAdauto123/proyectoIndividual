@@ -2,10 +2,13 @@ package com.example.proyectoindividualmoviles;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -49,6 +52,8 @@ public class PaginaPrincipalActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pagina_principal);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.action_bar_layout);
 
         Button buttonTecnologia = findViewById(R.id.buttonTecnologia);
         buttonTecnologia.setOnClickListener(new View.OnClickListener() {
@@ -227,7 +232,34 @@ public class PaginaPrincipalActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    public void mostrarTYC(){
 
+        AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
+        alertBuilder.setTitle("Terminos y Condiciones");
+        alertBuilder.setMessage("El presente Política de Privacidad establece los términos en que Virtual Education usa y protege " +
+                "la información que es proporcionada por sus usuarios al momento de utilizar su app. Esta " +
+                "compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos " +
+                "llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos " +
+                "asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo " +
+                "esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le " +
+                "recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de " +
+                "acuerdo con dichos cambios.\n \n" +
+                "Nuestro sitio web podrá recoger información personal por ejemplo: Nombre, información de " +
+                "contacto como su dirección de correo electrónica e información demográfica. Así mismo cuando " +
+                "sea necesario podrá ser requerida información específica para procesar algún pedido o realizar " +
+                "una entrega o facturación.\n \n" +
+                "Virtual Education está altamente comprometido para cumplir con el compromiso de mantener su " +
+                "información segura. Usamos los sistemas más avanzados y los actualizamos constantemente " +
+                "para asegurarnos que no exista ningún acceso no autorizado.\n");
+        alertBuilder.setPositiveButton("Conforme", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(PaginaPrincipalActivity.this,"Gracias por confiar en nosotros",Toast.LENGTH_SHORT).show();
+            }
+        });
+        alertBuilder.show();
+
+    }
     private void setupDrawer(NavigationView navigationView){
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -239,6 +271,9 @@ public class PaginaPrincipalActivity extends AppCompatActivity {
                         Intent intento = new Intent(PaginaPrincipalActivity.this,MainActivity.class);
                         startActivity(intento);
                         finish();
+                        break;
+                    case R.id.TYC:
+                        mostrarTYC();
                         break;
 
                 }
